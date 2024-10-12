@@ -2,6 +2,8 @@
 title: "Liberty Lynx Game One"
 output: github_document
 date: "2024-10-12"
+prefer-html: true
+
 ---
 
 ```{r setup, include=FALSE}
