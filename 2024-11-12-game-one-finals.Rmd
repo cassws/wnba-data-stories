@@ -133,6 +133,9 @@ wnba_pbp %>%
 
 There was actually one FIVE-point play - kelsey mitchell was fouled by arike shooting a 3 on Sept 1st. Arike got a technical for complaining - so it was a 5-point play!
 
+
+### Four point games in 2024... wait, what?
+
 ```{r five-point-play}
 wnba_pbp %>%
   mutate(day = as.Date(wallclock)) %>%
@@ -145,9 +148,11 @@ wnba_pbp %>%
   summarise(plays_in_2024 = n()) %>%
   rename(total_points_on_play = total_points) %>%
   select(plays_in_2024, total_points_on_play) %>%
-  gt() %>% 
+  knitr::kable()
+#%>%
+ # gt() %>% 
   #gt_theme_guardian() %>% 
-  tab_header(title = "Four point games in 2024... wait, what?")
+  #tab_header(title = "Four point games in 2024... wait, what?")
 
 ```
 ```{r deep dive}
@@ -252,6 +257,9 @@ wnba_pbp %>%
 
 ```
 
+
+### "Since the start of this postseason, Courtney has struggled with pullup jump shots - except when she's mid-sprint!!"
+
 ```{r}
 
 wnba_pbp %>%
@@ -272,15 +280,19 @@ wnba_pbp %>%
   filter(grepl("Jump Shot", type_text)) %>%
   mutate(makes_and_attempts = paste0(makes, " for ", attempts)) %>%
   rename(jumpshot_type = type_text) %>%
-  select(jumpshot_type, makes_and_attempts, success_rate) %>%
-  gt() %>% 
+  select(jumpshot_type, makes_and_attempts, success_rate)  %>%
+  knitr::kable()
+#%>%
+  #gt() %>% 
   #gt_theme_guardian() %>% 
-  tab_header(title = "Since the start of this postseason, Courtney has struggled with pullup jump shots - except when she's mid-sprint!!")
+  #tab_header(title = "Since the start of this postseason, Courtney has struggled with pullup jump shots - except when she's mid-sprint!!")
 
 ```
 
 
-Let's compare with Phee
+Let's compare with Phee.
+
+### Napheesa Collier shows a similar inclination towards more complex jump shots. But hers are pivot-y!
 
 ```{r}
 
@@ -303,9 +315,11 @@ wnba_pbp %>%
   mutate(makes_and_attempts = paste0(makes, " for ", attempts)) %>%
   rename(jumpshot_type = type_text) %>%
   select(jumpshot_type, makes_and_attempts, success_rate) %>%
-  gt() %>% 
+  knitr::kable()
+#%>%
+ # gt() %>% 
   #gt_theme_guardian() %>% 
-  tab_header(title = "Napheesa Collier shows a similar inclination towards more complex jump shots. But hers are pivot-y!")
+#  tab_header(title = "Napheesa Collier shows a similar inclination towards more complex jump shots. But hers are pivot-y!")
 
 ```
 
