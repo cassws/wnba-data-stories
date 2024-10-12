@@ -1,0 +1,388 @@
+---
+title: "Liberty Lynx Game One"
+output: html_document
+date: "2024-10-12"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE
+                      ,warning = FALSE)
+```
+
+## What a start!
+
+This is a little R investigation to the question:
+
+> How did the Lynx come back to win so decisively?
+
+Let's get started with some WNBA R packages.
+
+```{r load-pbp}
+library(wehoop)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(ggforce)
+library(gtExtras)
+wnba_pbp <- wehoop::load_wnba_pbp()
+
+```
+
+```{r game-data}
+finals_game_one_id <- 401726988
+
+finals_game_one_pbp <- wnba_pbp %>%
+  filter(game_id == finals_game_one_id)
+
+```
+
+
+```{r gameone-analysis}
+#finals_game_one_pbp %>%
+#  View()
+# 
+player_court_id <- 2987891
+player_phee_id <- 3917450
+# 
+# finals_game_one_pbp %>%
+#   filter(athlete_id_1 == player_court_id) %>%
+#   filter(shooting_play == TRUE) %>%
+#   View()
+# 
+# finals_game_one_pbp %>%
+#   filter(athlete_id_1 == player_phee_id) %>%
+#   filter(shooting_play == TRUE) %>%
+#   View()
+# 
+
+```
+
+```{r court-shot-chart}
+
+finals_game_one_pbp %>%
+  mutate(coordinate_x_raw = 50-coordinate_x_raw) %>%
+  filter(athlete_id_1 == player_court_id) %>%
+  filter(shooting_play == TRUE) %>%
+  ggplot(aes(x = coordinate_x_raw, y = coordinate_y_raw, color = scoring_play, size = 8)) +
+  geom_jitter() +
+    geom_segment(aes(x = 0, y = -4, xend = 50, yend = -4, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 17, y = 13, xend = 33, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 17, y = -4, xend = 17, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 19, y = -4, xend = 19, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 31, y = -4, xend = 31, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 33, y = -4, xend = 33, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 22, y = -0.75, xend = 28, yend = -0.75, alpha =0.1), inherit.aes = FALSE) +
+    geom_circle(aes(x0 = 25, y0 = 0, r = 0.75), inherit.aes = FALSE) +
+    geom_arc(aes(x0 = 25, y0= 0, r = 22.145, start = -1.2, end = 1.2), inherit.aes = FALSE) +
+    #geom_segment(aes(x = 3, y = -4, xend = 3, yend = 10, alpha =0.1), inherit.aes = FALSE) +
+    #geom_segment(aes(x = 47, y = -4, xend = 47, yend = 10, alpha =0.1), inherit.aes = FALSE) +
+    scale_size(guide = "none") +
+    scale_alpha(guide = "none") +
+    xlab("")+
+    ylab("")+
+    ggtitle("This chart was an excuse to watch Courtney Williams replays") +
+    theme_void() +
+    theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+```{r phee-shot-chart}
+
+finals_game_one_pbp %>%
+  mutate(coordinate_x_raw = 50-coordinate_x_raw) %>%
+  filter(athlete_id_1 == player_phee_id) %>%
+  filter(shooting_play == TRUE) %>%
+  ggplot(aes(x = coordinate_x_raw, y = coordinate_y_raw, color = scoring_play, size = 8)) +
+  geom_jitter() +
+    geom_segment(aes(x = 0, y = -4, xend = 50, yend = -4, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 17, y = 13, xend = 33, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 17, y = -4, xend = 17, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 19, y = -4, xend = 19, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 31, y = -4, xend = 31, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 33, y = -4, xend = 33, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 22, y = -0.75, xend = 28, yend = -0.75, alpha =0.1), inherit.aes = FALSE) +
+    geom_circle(aes(x0 = 25, y0 = 0, r = 0.75), inherit.aes = FALSE) +
+    geom_arc(aes(x0 = 25, y0= 0, r = 22.145, start = -1.2, end = 1.2), inherit.aes = FALSE) +
+    #geom_segment(aes(x = 3, y = -4, xend = 3, yend = 10, alpha =0.1), inherit.aes = FALSE) +
+    #geom_segment(aes(x = 47, y = -4, xend = 47, yend = 10, alpha =0.1), inherit.aes = FALSE) +
+    scale_size(guide = "none") +
+    scale_alpha(guide = "none") +
+    xlab("")+
+    ylab("")+
+    ggtitle("Phee is incredible") +
+    theme_void() +
+    theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+```{r cars}
+
+# find all 4 point_plays
+
+wnba_pbp %>%
+  mutate(day = as.Date(wallclock)) %>%
+  group_by(home_team_mascot, away_team_mascot, season, game_id, day, athlete_id_1,period_display_value, clock_display_value) %>%
+  summarize(total_points = sum(score_value)) %>%
+  filter(total_points > 3) %>%
+  arrange(desc(total_points))
+  
+```
+
+
+There was actually one FIVE-point play - kelsey mitchell was fouled by arike shooting a 3 on Sept 1st. Arike got a technical for complaining - so it was a 5-point play!
+
+```{r five-point-play}
+wnba_pbp %>%
+  mutate(day = as.Date(wallclock)) %>%
+  group_by(home_team_mascot, away_team_mascot, season, game_id, day, athlete_id_1,period_display_value, clock_display_value) %>%
+  summarize(total_points = sum(score_value)) %>%
+  filter(total_points > 3) %>%
+  arrange(desc(total_points)) %>%
+  select(total_points) %>%
+  group_by(total_points) %>%
+  summarise(plays_in_2024 = n()) %>%
+  rename(total_points_on_play = total_points) %>%
+  select(plays_in_2024, total_points_on_play) %>%
+  gt() %>% 
+  gt_theme_guardian() %>% 
+  tab_header(title = "Four point games in 2024... wait, what?")
+
+```
+```{r deep dive}
+finals_game_one_pbp %>%
+  mutate(coordinate_x_raw = 50-coordinate_x_raw) %>%
+  filter(athlete_id_1 == player_court_id) %>%
+  filter(shooting_play == TRUE) %>%
+  filter(sequence_number == 482) %>%
+  ggplot(aes(x = coordinate_x_raw, y = coordinate_y_raw,  size = 8)) +
+  geom_point() +
+    geom_segment(aes(x = 0, y = -4, xend = 50, yend = -4, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 17, y = 13, xend = 33, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 17, y = -4, xend = 17, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 19, y = -4, xend = 19, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 31, y = -4, xend = 31, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 33, y = -4, xend = 33, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 22, y = -0.75, xend = 28, yend = -0.75, alpha =0.1), inherit.aes = FALSE) +
+    geom_circle(aes(x0 = 25, y0 = 0, r = 0.75), inherit.aes = FALSE) +
+    geom_arc(aes(x0 = 25, y0= 0, r = 22.145, start = -1.2, end = 1.2), inherit.aes = FALSE) +
+    #geom_segment(aes(x = 3, y = -4, xend = 3, yend = 10, alpha =0.1), inherit.aes = FALSE) +
+    #geom_segment(aes(x = 47, y = -4, xend = 47, yend = 10, alpha =0.1), inherit.aes = FALSE) +
+    scale_size(guide = "none") +
+    scale_alpha(guide = "none") +
+    xlab("")+
+    ylab("")+
+    ggtitle("Wasn't this shot from the edge of the key?") +
+    theme_void() +
+    theme(plot.title = element_text(hjust = 0.5))
+
+
+```
+
+
+Now here's Phee in the post-season
+
+```{r}
+
+wnba_pbp %>%
+  mutate(coordinate_x_raw = 50-coordinate_x_raw) %>%
+  mutate(day = as.Date(wallclock)) %>%
+  filter(day >= "2024-09-22") %>%
+  filter(athlete_id_1 == player_court_id) %>%
+  filter(shooting_play == TRUE) %>%
+  filter(!grepl("Free Throw", type_text)) %>%
+  filter(grepl("Jump Shot", type_text)) %>%
+  filter(scoring_play == TRUE) %>%
+  ggplot(aes(x = coordinate_x_raw, y = coordinate_y_raw, color = type_text, size = 8, alpha = 0.4)) +
+  geom_jitter() +
+    geom_segment(aes(x = 0, y = -4, xend = 50, yend = -4, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 17, y = 13, xend = 33, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 17, y = -4, xend = 17, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 19, y = -4, xend = 19, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 31, y = -4, xend = 31, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 33, y = -4, xend = 33, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 22, y = -0.75, xend = 28, yend = -0.75, alpha =0.1), inherit.aes = FALSE) +
+    geom_circle(aes(x0 = 25, y0 = 0, r = 0.75), inherit.aes = FALSE) +
+    geom_arc(aes(x0 = 25, y0= 0, r = 22.145, start = -1.2, end = 1.2), inherit.aes = FALSE) +
+    #geom_segment(aes(x = 3, y = -4, xend = 3, yend = 10, alpha =0.1), inherit.aes = FALSE) +
+    #geom_segment(aes(x = 47, y = -4, xend = 47, yend = 10, alpha =0.1), inherit.aes = FALSE) +
+    scale_size(guide = "none") +
+    scale_alpha(guide = "none") +
+    xlab("")+
+    ylab("")+
+    ggtitle(" Courtney Williams is KILLING IT with high-momentum jump shots near the free-throw line") +
+    theme_void() +
+   # theme(plot.title = element_text(hjust = 0.5)) +
+    theme(legend.text=element_text(size=6))
+
+```
+```{r}
+
+wnba_pbp %>%
+  mutate(coordinate_x_raw = 50-coordinate_x_raw) %>%
+  mutate(day = as.Date(wallclock)) %>%
+  filter(day >= "2024-09-22") %>%
+  filter(athlete_id_1 == player_court_id) %>%
+  filter(shooting_play == TRUE) %>%
+  filter(!grepl("Free Throw", type_text)) %>%
+  filter(grepl("Jump Shot", type_text)) %>%
+  filter(scoring_play == FALSE) %>%
+  ggplot(aes(x = coordinate_x_raw, y = coordinate_y_raw, color = type_text, size = 8, alpha = 0.4)) +
+  geom_jitter() +
+    geom_segment(aes(x = 0, y = -4, xend = 50, yend = -4, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 17, y = 13, xend = 33, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 17, y = -4, xend = 17, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 19, y = -4, xend = 19, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 31, y = -4, xend = 31, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 33, y = -4, xend = 33, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 22, y = -0.75, xend = 28, yend = -0.75, alpha =0.1), inherit.aes = FALSE) +
+    geom_circle(aes(x0 = 25, y0 = 0, r = 0.75), inherit.aes = FALSE) +
+    geom_arc(aes(x0 = 25, y0= 0, r = 22.145, start = -1.2, end = 1.2), inherit.aes = FALSE) +
+    #geom_segment(aes(x = 3, y = -4, xend = 3, yend = 10, alpha =0.1), inherit.aes = FALSE) +
+    #geom_segment(aes(x = 47, y = -4, xend = 47, yend = 10, alpha =0.1), inherit.aes = FALSE) +
+    scale_size(guide = "none") +
+    scale_alpha(guide = "none") +
+    xlab("")+
+    ylab("")+
+    ggtitle(" Her traditional KILL ZONE is less successful this post-season. Here are her misses.") +
+    theme_void() +
+   # theme(plot.title = element_text(hjust = 0.5)) +
+    theme(legend.text=element_text(size=6))
+
+```
+
+```{r}
+
+wnba_pbp %>%
+  mutate(coordinate_x_raw = 50-coordinate_x_raw) %>%
+  mutate(day = as.Date(wallclock)) %>%
+  filter(day >= "2024-09-22") %>%
+  filter(athlete_id_1 == player_court_id) %>%
+  filter(shooting_play == TRUE) %>%
+  filter(!grepl("Free Throw", type_text)) %>%
+  group_by(type_text, scoring_play ) %>%
+  summarize(count = n()) %>%
+  pivot_wider(names_from = scoring_play , values_from = count, values_fill = 0) %>%
+  mutate(attempts = `FALSE` + `TRUE`) %>%
+  mutate(success_rate = `TRUE` / attempts) %>%
+  rename(makes = `TRUE`) %>%
+  arrange(desc(success_rate)) %>%
+  select(-`FALSE`) %>%
+  filter(grepl("Jump Shot", type_text)) %>%
+  mutate(makes_and_attempts = paste0(makes, " for ", attempts)) %>%
+  rename(jumpshot_type = type_text) %>%
+  select(jumpshot_type, makes_and_attempts, success_rate) %>%
+  gt() %>% 
+  gt_theme_guardian() %>% 
+  tab_header(title = "Since the start of this postseason, Courtney has struggled with pullup jump shots - except when she's mid-sprint!!")
+
+```
+
+
+Let's compare with Phee
+
+```{r}
+
+wnba_pbp %>%
+  mutate(coordinate_x_raw = 50-coordinate_x_raw) %>%
+  mutate(day = as.Date(wallclock)) %>%
+  filter(day >= "2024-09-22") %>%
+  filter(athlete_id_1 == player_phee_id) %>%
+  filter(shooting_play == TRUE) %>%
+  filter(!grepl("Free Throw", type_text)) %>%
+  group_by(type_text, scoring_play ) %>%
+  summarize(count = n()) %>%
+  pivot_wider(names_from = scoring_play , values_from = count, values_fill = 0) %>%
+  mutate(attempts = `FALSE` + `TRUE`) %>%
+  mutate(success_rate = `TRUE` / attempts) %>%
+  rename(makes = `TRUE`) %>%
+  arrange(desc(attempts)) %>%
+  select(-`FALSE`) %>%
+  filter(grepl("Jump Shot", type_text)) %>%
+  mutate(makes_and_attempts = paste0(makes, " for ", attempts)) %>%
+  rename(jumpshot_type = type_text) %>%
+  select(jumpshot_type, makes_and_attempts, success_rate) %>%
+  gt() %>% 
+  gt_theme_guardian() %>% 
+  tab_header(title = "Napheesa Collier shows a similar inclination towards more complex jump shots. But hers are pivot-y!")
+
+```
+
+
+```{r}
+
+wnba_pbp %>%
+  mutate(coordinate_x_raw = 50-coordinate_x_raw) %>%
+  mutate(day = as.Date(wallclock)) %>%
+  filter(day >= "2024-09-22") %>%
+  filter(athlete_id_1 == player_phee_id) %>%
+  filter(shooting_play == TRUE) %>%
+  filter(!grepl("Free Throw", type_text)) %>%
+  filter(grepl("Jump Shot", type_text)) %>%
+  filter(scoring_play == TRUE) %>%
+  ggplot(aes(x = coordinate_x_raw, y = coordinate_y_raw, color = type_text, size = 8, alpha = 0.4)) +
+  geom_jitter() +
+    geom_segment(aes(x = 0, y = -4, xend = 50, yend = -4, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 17, y = 13, xend = 33, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 17, y = -4, xend = 17, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 19, y = -4, xend = 19, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 31, y = -4, xend = 31, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 33, y = -4, xend = 33, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 22, y = -0.75, xend = 28, yend = -0.75, alpha =0.1), inherit.aes = FALSE) +
+    geom_circle(aes(x0 = 25, y0 = 0, r = 0.75), inherit.aes = FALSE) +
+    geom_arc(aes(x0 = 25, y0= 0, r = 22.145, start = -1.2, end = 1.2), inherit.aes = FALSE) +
+    #geom_segment(aes(x = 3, y = -4, xend = 3, yend = 10, alpha =0.1), inherit.aes = FALSE) +
+    #geom_segment(aes(x = 47, y = -4, xend = 47, yend = 10, alpha =0.1), inherit.aes = FALSE) +
+    scale_size(guide = "none") +
+    scale_alpha(guide = "none") +
+    xlab("")+
+    ylab("")+
+    ggtitle(" High-pivot Napheesa Collier success this postseason!!") +
+    theme_void() +
+   # theme(plot.title = element_text(hjust = 0.5)) +
+    theme(legend.text=element_text(size=6))
+
+```
+
+```{r}
+
+wnba_pbp %>%
+  mutate(coordinate_x_raw = 50-coordinate_x_raw) %>%
+  mutate(day = as.Date(wallclock)) %>%
+  filter(day >= "2024-09-22") %>%
+  filter(athlete_id_1 == player_phee_id) %>%
+  filter(shooting_play == TRUE) %>%
+  filter(!grepl("Free Throw", type_text)) %>%
+  filter(grepl("Jump Shot", type_text)) %>%
+  filter(scoring_play == FALSE) %>%
+  ggplot(aes(x = coordinate_x_raw, y = coordinate_y_raw, color = type_text, size = 8, alpha = 0.4)) +
+  geom_jitter() +
+    geom_segment(aes(x = 0, y = -4, xend = 50, yend = -4, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 17, y = 13, xend = 33, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 17, y = -4, xend = 17, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 19, y = -4, xend = 19, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 31, y = -4, xend = 31, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 33, y = -4, xend = 33, yend = 13, alpha =0.1), inherit.aes = FALSE) +
+    geom_segment(aes(x = 22, y = -0.75, xend = 28, yend = -0.75, alpha =0.1), inherit.aes = FALSE) +
+    geom_circle(aes(x0 = 25, y0 = 0, r = 0.75), inherit.aes = FALSE) +
+    geom_arc(aes(x0 = 25, y0= 0, r = 22.145, start = -1.2, end = 1.2), inherit.aes = FALSE) +
+    #geom_segment(aes(x = 3, y = -4, xend = 3, yend = 10, alpha =0.1), inherit.aes = FALSE) +
+    #geom_segment(aes(x = 47, y = -4, xend = 47, yend = 10, alpha =0.1), inherit.aes = FALSE) +
+    scale_size(guide = "none") +
+    scale_alpha(guide = "none") +
+    xlab("")+
+    ylab("")+
+    ggtitle(" High-pivot Napheesa Collier success this postseason!!") +
+    theme_void() +
+   # theme(plot.title = element_text(hjust = 0.5)) +
+    theme(legend.text=element_text(size=6))
+
+```
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
