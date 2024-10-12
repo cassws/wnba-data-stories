@@ -146,7 +146,7 @@ wnba_pbp %>%
   rename(total_points_on_play = total_points) %>%
   select(plays_in_2024, total_points_on_play) %>%
   gt() %>% 
-  gt_theme_guardian() %>% 
+  #gt_theme_guardian() %>% 
   tab_header(title = "Four point games in 2024... wait, what?")
 
 ```
@@ -274,7 +274,7 @@ wnba_pbp %>%
   rename(jumpshot_type = type_text) %>%
   select(jumpshot_type, makes_and_attempts, success_rate) %>%
   gt() %>% 
-  gt_theme_guardian() %>% 
+  #gt_theme_guardian() %>% 
   tab_header(title = "Since the start of this postseason, Courtney has struggled with pullup jump shots - except when she's mid-sprint!!")
 
 ```
@@ -304,7 +304,7 @@ wnba_pbp %>%
   rename(jumpshot_type = type_text) %>%
   select(jumpshot_type, makes_and_attempts, success_rate) %>%
   gt() %>% 
-  gt_theme_guardian() %>% 
+  #gt_theme_guardian() %>% 
   tab_header(title = "Napheesa Collier shows a similar inclination towards more complex jump shots. But hers are pivot-y!")
 
 ```

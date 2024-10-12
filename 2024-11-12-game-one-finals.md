@@ -183,7 +183,7 @@ wnba_pbp %>%
   rename(total_points_on_play = total_points) %>%
   select(plays_in_2024, total_points_on_play) %>%
   gt() %>% 
-  gt_theme_guardian() %>% 
+  #gt_theme_guardian() %>% 
   tab_header(title = "Four point games in 2024... wait, what?")
 ```
 
@@ -193,21 +193,20 @@ wnba_pbp %>%
     ## Adding missing grouping variables: `home_team_mascot`, `away_team_mascot`,
     ## `season`, `game_id`, `day`, `athlete_id_1`, `period_display_value`
 
-<div id="odfbzqzlym" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#odfbzqzlym table {
-  font-family: 'Noto Sans', system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+<div id="iqdrnrklxq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#iqdrnrklxq table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-&#10;#odfbzqzlym thead, #odfbzqzlym tbody, #odfbzqzlym tfoot, #odfbzqzlym tr, #odfbzqzlym td, #odfbzqzlym th {
+&#10;#iqdrnrklxq thead, #iqdrnrklxq tbody, #iqdrnrklxq tfoot, #iqdrnrklxq tr, #iqdrnrklxq td, #iqdrnrklxq th {
   border-style: none;
 }
-&#10;#odfbzqzlym p {
+&#10;#iqdrnrklxq p {
   margin: 0;
   padding: 0;
 }
-&#10;#odfbzqzlym .gt_table {
+&#10;#iqdrnrklxq .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -217,26 +216,26 @@ wnba_pbp %>%
   font-size: 16px;
   font-weight: normal;
   font-style: normal;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   width: auto;
   border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #40C5FF;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
   border-right-style: none;
   border-right-width: 2px;
   border-right-color: #D3D3D3;
   border-bottom-style: solid;
-  border-bottom-width: 3px;
-  border-bottom-color: #FFFFFF;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
   border-left-style: none;
   border-left-width: 2px;
   border-left-color: #D3D3D3;
 }
-&#10;#odfbzqzlym .gt_caption {
+&#10;#iqdrnrklxq .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
-&#10;#odfbzqzlym .gt_title {
+&#10;#iqdrnrklxq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -244,10 +243,10 @@ wnba_pbp %>%
   padding-bottom: 4px;
   padding-left: 5px;
   padding-right: 5px;
-  border-bottom-color: #F6F6F6;
+  border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
-&#10;#odfbzqzlym .gt_subtitle {
+&#10;#iqdrnrklxq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -255,13 +254,13 @@ wnba_pbp %>%
   padding-bottom: 5px;
   padding-left: 5px;
   padding-right: 5px;
-  border-top-color: #F6F6F6;
+  border-top-color: #FFFFFF;
   border-top-width: 0;
 }
-&#10;#odfbzqzlym .gt_heading {
-  background-color: #F6F6F6;
-  text-align: left;
-  border-bottom-color: #F6F6F6;
+&#10;#iqdrnrklxq .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
   border-left-style: none;
   border-left-width: 1px;
   border-left-color: #D3D3D3;
@@ -269,18 +268,18 @@ wnba_pbp %>%
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#odfbzqzlym .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 0px;
-  border-bottom-color: #D3D3D3;
-}
-&#10;#odfbzqzlym .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #40C5FF;
+&#10;#iqdrnrklxq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
-  border-bottom-color: #ECECEC;
+  border-bottom-color: #D3D3D3;
+}
+&#10;#iqdrnrklxq .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
   border-left-style: none;
   border-left-width: 1px;
   border-left-color: #D3D3D3;
@@ -288,11 +287,11 @@ wnba_pbp %>%
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#odfbzqzlym .gt_col_heading {
+&#10;#iqdrnrklxq .gt_col_heading {
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   font-size: 100%;
-  font-weight: bold;
+  font-weight: normal;
   text-transform: inherit;
   border-left-style: none;
   border-left-width: 1px;
@@ -307,27 +306,27 @@ wnba_pbp %>%
   padding-right: 5px;
   overflow-x: hidden;
 }
-&#10;#odfbzqzlym .gt_column_spanner_outer {
+&#10;#iqdrnrklxq .gt_column_spanner_outer {
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   font-size: 100%;
-  font-weight: bold;
+  font-weight: normal;
   text-transform: inherit;
   padding-top: 0;
   padding-bottom: 0;
   padding-left: 4px;
   padding-right: 4px;
 }
-&#10;#odfbzqzlym .gt_column_spanner_outer:first-child {
+&#10;#iqdrnrklxq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
-&#10;#odfbzqzlym .gt_column_spanner_outer:last-child {
+&#10;#iqdrnrklxq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
-&#10;#odfbzqzlym .gt_column_spanner {
+&#10;#iqdrnrklxq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
-  border-bottom-color: #ECECEC;
+  border-bottom-color: #D3D3D3;
   vertical-align: bottom;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -335,25 +334,25 @@ wnba_pbp %>%
   display: inline-block;
   width: 100%;
 }
-&#10;#odfbzqzlym .gt_spanner_row {
+&#10;#iqdrnrklxq .gt_spanner_row {
   border-bottom-style: hidden;
 }
-&#10;#odfbzqzlym .gt_group_heading {
+&#10;#iqdrnrklxq .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
   padding-right: 5px;
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   font-size: 100%;
-  font-weight: bold;
+  font-weight: initial;
   text-transform: inherit;
   border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #BEBEBE;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
   border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: #BEBEBE;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
   border-left-style: none;
   border-left-width: 1px;
   border-left-color: #D3D3D3;
@@ -363,35 +362,35 @@ wnba_pbp %>%
   vertical-align: middle;
   text-align: left;
 }
-&#10;#odfbzqzlym .gt_empty_group_heading {
+&#10;#iqdrnrklxq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   font-size: 100%;
-  font-weight: bold;
+  font-weight: initial;
   border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #BEBEBE;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
   border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: #BEBEBE;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
   vertical-align: middle;
 }
-&#10;#odfbzqzlym .gt_from_md > :first-child {
+&#10;#iqdrnrklxq .gt_from_md > :first-child {
   margin-top: 0;
 }
-&#10;#odfbzqzlym .gt_from_md > :last-child {
+&#10;#iqdrnrklxq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
-&#10;#odfbzqzlym .gt_row {
-  padding-top: 4px;
-  padding-bottom: 4px;
+&#10;#iqdrnrklxq .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
   padding-left: 5px;
   padding-right: 5px;
   margin: 10px;
   border-top-style: solid;
-  border-top-width: white;
-  border-top-color: #FFFFFF;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
   border-left-style: none;
   border-left-width: 1px;
   border-left-color: #D3D3D3;
@@ -401,9 +400,9 @@ wnba_pbp %>%
   vertical-align: middle;
   overflow-x: hidden;
 }
-&#10;#odfbzqzlym .gt_stub {
+&#10;#iqdrnrklxq .gt_stub {
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   font-size: 100%;
   font-weight: initial;
   text-transform: inherit;
@@ -413,9 +412,9 @@ wnba_pbp %>%
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#odfbzqzlym .gt_stub_row_group {
+&#10;#iqdrnrklxq .gt_stub_row_group {
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   font-size: 100%;
   font-weight: initial;
   text-transform: inherit;
@@ -426,29 +425,29 @@ wnba_pbp %>%
   padding-right: 5px;
   vertical-align: top;
 }
-&#10;#odfbzqzlym .gt_row_group_first td {
-  border-top-width: 1px;
+&#10;#iqdrnrklxq .gt_row_group_first td {
+  border-top-width: 2px;
 }
-&#10;#odfbzqzlym .gt_row_group_first th {
-  border-top-width: 1px;
+&#10;#iqdrnrklxq .gt_row_group_first th {
+  border-top-width: 2px;
 }
-&#10;#odfbzqzlym .gt_summary_row {
+&#10;#iqdrnrklxq .gt_summary_row {
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   text-transform: inherit;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#odfbzqzlym .gt_first_summary_row {
+&#10;#iqdrnrklxq .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
-&#10;#odfbzqzlym .gt_first_summary_row.thick {
+&#10;#iqdrnrklxq .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
-&#10;#odfbzqzlym .gt_last_summary_row {
+&#10;#iqdrnrklxq .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -457,16 +456,16 @@ wnba_pbp %>%
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#odfbzqzlym .gt_grand_summary_row {
+&#10;#iqdrnrklxq .gt_grand_summary_row {
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   text-transform: inherit;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#odfbzqzlym .gt_first_grand_summary_row {
+&#10;#iqdrnrklxq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -475,7 +474,7 @@ wnba_pbp %>%
   border-top-width: 6px;
   border-top-color: #D3D3D3;
 }
-&#10;#odfbzqzlym .gt_last_grand_summary_row_top {
+&#10;#iqdrnrklxq .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -484,22 +483,22 @@ wnba_pbp %>%
   border-bottom-width: 6px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#odfbzqzlym .gt_striped {
-  background-color: #ECECEC;
+&#10;#iqdrnrklxq .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
 }
-&#10;#odfbzqzlym .gt_table_body {
+&#10;#iqdrnrklxq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
   border-bottom-style: solid;
-  border-bottom-width: 3px;
-  border-bottom-color: #FFFFFF;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
 }
-&#10;#odfbzqzlym .gt_footnotes {
+&#10;#iqdrnrklxq .gt_footnotes {
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   border-bottom-style: none;
-  border-bottom-width: 0px;
+  border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
   border-left-style: none;
   border-left-width: 2px;
@@ -508,7 +507,7 @@ wnba_pbp %>%
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#odfbzqzlym .gt_footnote {
+&#10;#iqdrnrklxq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -516,11 +515,11 @@ wnba_pbp %>%
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#odfbzqzlym .gt_sourcenotes {
+&#10;#iqdrnrklxq .gt_sourcenotes {
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   border-bottom-style: none;
-  border-bottom-width: 0px;
+  border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
   border-left-style: none;
   border-left-width: 2px;
@@ -529,71 +528,71 @@ wnba_pbp %>%
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#odfbzqzlym .gt_sourcenote {
-  font-size: 12px;
+&#10;#iqdrnrklxq .gt_sourcenote {
+  font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#odfbzqzlym .gt_left {
+&#10;#iqdrnrklxq .gt_left {
   text-align: left;
 }
-&#10;#odfbzqzlym .gt_center {
+&#10;#iqdrnrklxq .gt_center {
   text-align: center;
 }
-&#10;#odfbzqzlym .gt_right {
+&#10;#iqdrnrklxq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
-&#10;#odfbzqzlym .gt_font_normal {
+&#10;#iqdrnrklxq .gt_font_normal {
   font-weight: normal;
 }
-&#10;#odfbzqzlym .gt_font_bold {
+&#10;#iqdrnrklxq .gt_font_bold {
   font-weight: bold;
 }
-&#10;#odfbzqzlym .gt_font_italic {
+&#10;#iqdrnrklxq .gt_font_italic {
   font-style: italic;
 }
-&#10;#odfbzqzlym .gt_super {
+&#10;#iqdrnrklxq .gt_super {
   font-size: 65%;
 }
-&#10;#odfbzqzlym .gt_footnote_marks {
+&#10;#iqdrnrklxq .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
-&#10;#odfbzqzlym .gt_asterisk {
+&#10;#iqdrnrklxq .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
-&#10;#odfbzqzlym .gt_indent_1 {
+&#10;#iqdrnrklxq .gt_indent_1 {
   text-indent: 5px;
 }
-&#10;#odfbzqzlym .gt_indent_2 {
+&#10;#iqdrnrklxq .gt_indent_2 {
   text-indent: 10px;
 }
-&#10;#odfbzqzlym .gt_indent_3 {
+&#10;#iqdrnrklxq .gt_indent_3 {
   text-indent: 15px;
 }
-&#10;#odfbzqzlym .gt_indent_4 {
+&#10;#iqdrnrklxq .gt_indent_4 {
   text-indent: 20px;
 }
-&#10;#odfbzqzlym .gt_indent_5 {
+&#10;#iqdrnrklxq .gt_indent_5 {
   text-indent: 25px;
 }
-&#10;#odfbzqzlym .katex-display {
+&#10;#iqdrnrklxq .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
-&#10;#odfbzqzlym div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+&#10;#iqdrnrklxq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
 <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
   <thead>
     <tr class="gt_heading">
-      <td colspan="2" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="color: #005689; font-size: 22px; font-weight: 700;">Four point games in 2024... wait, what?</td>
+      <td colspan="2" class="gt_heading gt_title gt_font_normal gt_bottom_border" style>Four point games in 2024... wait, what?</td>
     </tr>
     &#10;    <tr class="gt_col_headings">
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="plays_in_2024">plays_in_2024</th>
@@ -601,10 +600,10 @@ wnba_pbp %>%
     </tr>
   </thead>
   <tbody class="gt_table_body">
-    <tr><td headers="plays_in_2024" class="gt_row gt_right" style="border-top-width: 0px; border-top-style: solid; border-top-color: white;">19</td>
-<td headers="total_points_on_play" class="gt_row gt_right" style="border-top-width: 0px; border-top-style: solid; border-top-color: white;">4</td></tr>
-    <tr><td headers="plays_in_2024" class="gt_row gt_right gt_striped">1</td>
-<td headers="total_points_on_play" class="gt_row gt_right gt_striped">5</td></tr>
+    <tr><td headers="plays_in_2024" class="gt_row gt_right">19</td>
+<td headers="total_points_on_play" class="gt_row gt_right">4</td></tr>
+    <tr><td headers="plays_in_2024" class="gt_row gt_right">1</td>
+<td headers="total_points_on_play" class="gt_row gt_right">5</td></tr>
   </tbody>
   &#10;  
 </table>
@@ -733,28 +732,27 @@ wnba_pbp %>%
   rename(jumpshot_type = type_text) %>%
   select(jumpshot_type, makes_and_attempts, success_rate) %>%
   gt() %>% 
-  gt_theme_guardian() %>% 
+  #gt_theme_guardian() %>% 
   tab_header(title = "Since the start of this postseason, Courtney has struggled with pullup jump shots - except when she's mid-sprint!!")
 ```
 
     ## `summarise()` has grouped output by 'type_text'. You can override using the
     ## `.groups` argument.
 
-<div id="glrjjseyci" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#glrjjseyci table {
-  font-family: 'Noto Sans', system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+<div id="dyewoahlym" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dyewoahlym table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-&#10;#glrjjseyci thead, #glrjjseyci tbody, #glrjjseyci tfoot, #glrjjseyci tr, #glrjjseyci td, #glrjjseyci th {
+&#10;#dyewoahlym thead, #dyewoahlym tbody, #dyewoahlym tfoot, #dyewoahlym tr, #dyewoahlym td, #dyewoahlym th {
   border-style: none;
 }
-&#10;#glrjjseyci p {
+&#10;#dyewoahlym p {
   margin: 0;
   padding: 0;
 }
-&#10;#glrjjseyci .gt_table {
+&#10;#dyewoahlym .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -764,26 +762,26 @@ wnba_pbp %>%
   font-size: 16px;
   font-weight: normal;
   font-style: normal;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   width: auto;
   border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #40C5FF;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
   border-right-style: none;
   border-right-width: 2px;
   border-right-color: #D3D3D3;
   border-bottom-style: solid;
-  border-bottom-width: 3px;
-  border-bottom-color: #FFFFFF;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
   border-left-style: none;
   border-left-width: 2px;
   border-left-color: #D3D3D3;
 }
-&#10;#glrjjseyci .gt_caption {
+&#10;#dyewoahlym .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
-&#10;#glrjjseyci .gt_title {
+&#10;#dyewoahlym .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -791,10 +789,10 @@ wnba_pbp %>%
   padding-bottom: 4px;
   padding-left: 5px;
   padding-right: 5px;
-  border-bottom-color: #F6F6F6;
+  border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
-&#10;#glrjjseyci .gt_subtitle {
+&#10;#dyewoahlym .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -802,13 +800,13 @@ wnba_pbp %>%
   padding-bottom: 5px;
   padding-left: 5px;
   padding-right: 5px;
-  border-top-color: #F6F6F6;
+  border-top-color: #FFFFFF;
   border-top-width: 0;
 }
-&#10;#glrjjseyci .gt_heading {
-  background-color: #F6F6F6;
-  text-align: left;
-  border-bottom-color: #F6F6F6;
+&#10;#dyewoahlym .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
   border-left-style: none;
   border-left-width: 1px;
   border-left-color: #D3D3D3;
@@ -816,18 +814,18 @@ wnba_pbp %>%
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#glrjjseyci .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 0px;
-  border-bottom-color: #D3D3D3;
-}
-&#10;#glrjjseyci .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #40C5FF;
+&#10;#dyewoahlym .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
-  border-bottom-color: #ECECEC;
+  border-bottom-color: #D3D3D3;
+}
+&#10;#dyewoahlym .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
   border-left-style: none;
   border-left-width: 1px;
   border-left-color: #D3D3D3;
@@ -835,11 +833,11 @@ wnba_pbp %>%
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#glrjjseyci .gt_col_heading {
+&#10;#dyewoahlym .gt_col_heading {
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   font-size: 100%;
-  font-weight: bold;
+  font-weight: normal;
   text-transform: inherit;
   border-left-style: none;
   border-left-width: 1px;
@@ -854,27 +852,27 @@ wnba_pbp %>%
   padding-right: 5px;
   overflow-x: hidden;
 }
-&#10;#glrjjseyci .gt_column_spanner_outer {
+&#10;#dyewoahlym .gt_column_spanner_outer {
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   font-size: 100%;
-  font-weight: bold;
+  font-weight: normal;
   text-transform: inherit;
   padding-top: 0;
   padding-bottom: 0;
   padding-left: 4px;
   padding-right: 4px;
 }
-&#10;#glrjjseyci .gt_column_spanner_outer:first-child {
+&#10;#dyewoahlym .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
-&#10;#glrjjseyci .gt_column_spanner_outer:last-child {
+&#10;#dyewoahlym .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
-&#10;#glrjjseyci .gt_column_spanner {
+&#10;#dyewoahlym .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
-  border-bottom-color: #ECECEC;
+  border-bottom-color: #D3D3D3;
   vertical-align: bottom;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -882,25 +880,25 @@ wnba_pbp %>%
   display: inline-block;
   width: 100%;
 }
-&#10;#glrjjseyci .gt_spanner_row {
+&#10;#dyewoahlym .gt_spanner_row {
   border-bottom-style: hidden;
 }
-&#10;#glrjjseyci .gt_group_heading {
+&#10;#dyewoahlym .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
   padding-right: 5px;
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   font-size: 100%;
-  font-weight: bold;
+  font-weight: initial;
   text-transform: inherit;
   border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #BEBEBE;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
   border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: #BEBEBE;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
   border-left-style: none;
   border-left-width: 1px;
   border-left-color: #D3D3D3;
@@ -910,35 +908,35 @@ wnba_pbp %>%
   vertical-align: middle;
   text-align: left;
 }
-&#10;#glrjjseyci .gt_empty_group_heading {
+&#10;#dyewoahlym .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   font-size: 100%;
-  font-weight: bold;
+  font-weight: initial;
   border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #BEBEBE;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
   border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: #BEBEBE;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
   vertical-align: middle;
 }
-&#10;#glrjjseyci .gt_from_md > :first-child {
+&#10;#dyewoahlym .gt_from_md > :first-child {
   margin-top: 0;
 }
-&#10;#glrjjseyci .gt_from_md > :last-child {
+&#10;#dyewoahlym .gt_from_md > :last-child {
   margin-bottom: 0;
 }
-&#10;#glrjjseyci .gt_row {
-  padding-top: 4px;
-  padding-bottom: 4px;
+&#10;#dyewoahlym .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
   padding-left: 5px;
   padding-right: 5px;
   margin: 10px;
   border-top-style: solid;
-  border-top-width: white;
-  border-top-color: #FFFFFF;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
   border-left-style: none;
   border-left-width: 1px;
   border-left-color: #D3D3D3;
@@ -948,9 +946,9 @@ wnba_pbp %>%
   vertical-align: middle;
   overflow-x: hidden;
 }
-&#10;#glrjjseyci .gt_stub {
+&#10;#dyewoahlym .gt_stub {
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   font-size: 100%;
   font-weight: initial;
   text-transform: inherit;
@@ -960,9 +958,9 @@ wnba_pbp %>%
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#glrjjseyci .gt_stub_row_group {
+&#10;#dyewoahlym .gt_stub_row_group {
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   font-size: 100%;
   font-weight: initial;
   text-transform: inherit;
@@ -973,29 +971,29 @@ wnba_pbp %>%
   padding-right: 5px;
   vertical-align: top;
 }
-&#10;#glrjjseyci .gt_row_group_first td {
-  border-top-width: 1px;
+&#10;#dyewoahlym .gt_row_group_first td {
+  border-top-width: 2px;
 }
-&#10;#glrjjseyci .gt_row_group_first th {
-  border-top-width: 1px;
+&#10;#dyewoahlym .gt_row_group_first th {
+  border-top-width: 2px;
 }
-&#10;#glrjjseyci .gt_summary_row {
+&#10;#dyewoahlym .gt_summary_row {
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   text-transform: inherit;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#glrjjseyci .gt_first_summary_row {
+&#10;#dyewoahlym .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
-&#10;#glrjjseyci .gt_first_summary_row.thick {
+&#10;#dyewoahlym .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
-&#10;#glrjjseyci .gt_last_summary_row {
+&#10;#dyewoahlym .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1004,16 +1002,16 @@ wnba_pbp %>%
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#glrjjseyci .gt_grand_summary_row {
+&#10;#dyewoahlym .gt_grand_summary_row {
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   text-transform: inherit;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#glrjjseyci .gt_first_grand_summary_row {
+&#10;#dyewoahlym .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1022,7 +1020,7 @@ wnba_pbp %>%
   border-top-width: 6px;
   border-top-color: #D3D3D3;
 }
-&#10;#glrjjseyci .gt_last_grand_summary_row_top {
+&#10;#dyewoahlym .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1031,22 +1029,22 @@ wnba_pbp %>%
   border-bottom-width: 6px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#glrjjseyci .gt_striped {
-  background-color: #ECECEC;
+&#10;#dyewoahlym .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
 }
-&#10;#glrjjseyci .gt_table_body {
+&#10;#dyewoahlym .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
   border-bottom-style: solid;
-  border-bottom-width: 3px;
-  border-bottom-color: #FFFFFF;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
 }
-&#10;#glrjjseyci .gt_footnotes {
+&#10;#dyewoahlym .gt_footnotes {
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   border-bottom-style: none;
-  border-bottom-width: 0px;
+  border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
   border-left-style: none;
   border-left-width: 2px;
@@ -1055,7 +1053,7 @@ wnba_pbp %>%
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#glrjjseyci .gt_footnote {
+&#10;#dyewoahlym .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1063,11 +1061,11 @@ wnba_pbp %>%
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#glrjjseyci .gt_sourcenotes {
+&#10;#dyewoahlym .gt_sourcenotes {
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   border-bottom-style: none;
-  border-bottom-width: 0px;
+  border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
   border-left-style: none;
   border-left-width: 2px;
@@ -1076,71 +1074,71 @@ wnba_pbp %>%
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#glrjjseyci .gt_sourcenote {
-  font-size: 12px;
+&#10;#dyewoahlym .gt_sourcenote {
+  font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#glrjjseyci .gt_left {
+&#10;#dyewoahlym .gt_left {
   text-align: left;
 }
-&#10;#glrjjseyci .gt_center {
+&#10;#dyewoahlym .gt_center {
   text-align: center;
 }
-&#10;#glrjjseyci .gt_right {
+&#10;#dyewoahlym .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
-&#10;#glrjjseyci .gt_font_normal {
+&#10;#dyewoahlym .gt_font_normal {
   font-weight: normal;
 }
-&#10;#glrjjseyci .gt_font_bold {
+&#10;#dyewoahlym .gt_font_bold {
   font-weight: bold;
 }
-&#10;#glrjjseyci .gt_font_italic {
+&#10;#dyewoahlym .gt_font_italic {
   font-style: italic;
 }
-&#10;#glrjjseyci .gt_super {
+&#10;#dyewoahlym .gt_super {
   font-size: 65%;
 }
-&#10;#glrjjseyci .gt_footnote_marks {
+&#10;#dyewoahlym .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
-&#10;#glrjjseyci .gt_asterisk {
+&#10;#dyewoahlym .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
-&#10;#glrjjseyci .gt_indent_1 {
+&#10;#dyewoahlym .gt_indent_1 {
   text-indent: 5px;
 }
-&#10;#glrjjseyci .gt_indent_2 {
+&#10;#dyewoahlym .gt_indent_2 {
   text-indent: 10px;
 }
-&#10;#glrjjseyci .gt_indent_3 {
+&#10;#dyewoahlym .gt_indent_3 {
   text-indent: 15px;
 }
-&#10;#glrjjseyci .gt_indent_4 {
+&#10;#dyewoahlym .gt_indent_4 {
   text-indent: 20px;
 }
-&#10;#glrjjseyci .gt_indent_5 {
+&#10;#dyewoahlym .gt_indent_5 {
   text-indent: 25px;
 }
-&#10;#glrjjseyci .katex-display {
+&#10;#dyewoahlym .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
-&#10;#glrjjseyci div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+&#10;#dyewoahlym div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
 <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
   <thead>
     <tr class="gt_heading">
-      <td colspan="2" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="color: #005689; font-size: 22px; font-weight: 700;">Since the start of this postseason, Courtney has struggled with pullup jump shots - except when she's mid-sprint!!</td>
+      <td colspan="2" class="gt_heading gt_title gt_font_normal gt_bottom_border" style>Since the start of this postseason, Courtney has struggled with pullup jump shots - except when she's mid-sprint!!</td>
     </tr>
     &#10;    <tr class="gt_col_headings">
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="makes_and_attempts">makes_and_attempts</th>
@@ -1151,13 +1149,13 @@ wnba_pbp %>%
     <tr class="gt_group_heading_row">
       <th colspan="2" class="gt_group_heading" scope="colgroup" id="Driving Floating Bank Jump Shot">Driving Floating Bank Jump Shot</th>
     </tr>
-    <tr class="gt_row_group_first"><td headers="Driving Floating Bank Jump Shot  makes_and_attempts" class="gt_row gt_left" style="border-top-width: 0px; border-top-style: solid; border-top-color: white;">1 for 1</td>
-<td headers="Driving Floating Bank Jump Shot  success_rate" class="gt_row gt_right" style="border-top-width: 0px; border-top-style: solid; border-top-color: white;">1.0000000</td></tr>
+    <tr class="gt_row_group_first"><td headers="Driving Floating Bank Jump Shot  makes_and_attempts" class="gt_row gt_left">1 for 1</td>
+<td headers="Driving Floating Bank Jump Shot  success_rate" class="gt_row gt_right">1.0000000</td></tr>
     <tr class="gt_group_heading_row">
       <th colspan="2" class="gt_group_heading" scope="colgroup" id="Fade Away Jump Shot">Fade Away Jump Shot</th>
     </tr>
-    <tr class="gt_row_group_first"><td headers="Fade Away Jump Shot  makes_and_attempts" class="gt_row gt_left gt_striped">1 for 1</td>
-<td headers="Fade Away Jump Shot  success_rate" class="gt_row gt_right gt_striped">1.0000000</td></tr>
+    <tr class="gt_row_group_first"><td headers="Fade Away Jump Shot  makes_and_attempts" class="gt_row gt_left">1 for 1</td>
+<td headers="Fade Away Jump Shot  success_rate" class="gt_row gt_right">1.0000000</td></tr>
     <tr class="gt_group_heading_row">
       <th colspan="2" class="gt_group_heading" scope="colgroup" id="Running Pullup Jump Shot">Running Pullup Jump Shot</th>
     </tr>
@@ -1166,8 +1164,8 @@ wnba_pbp %>%
     <tr class="gt_group_heading_row">
       <th colspan="2" class="gt_group_heading" scope="colgroup" id="Jump Shot">Jump Shot</th>
     </tr>
-    <tr class="gt_row_group_first"><td headers="Jump Shot  makes_and_attempts" class="gt_row gt_left gt_striped">13 for 21</td>
-<td headers="Jump Shot  success_rate" class="gt_row gt_right gt_striped">0.6190476</td></tr>
+    <tr class="gt_row_group_first"><td headers="Jump Shot  makes_and_attempts" class="gt_row gt_left">13 for 21</td>
+<td headers="Jump Shot  success_rate" class="gt_row gt_right">0.6190476</td></tr>
     <tr class="gt_group_heading_row">
       <th colspan="2" class="gt_group_heading" scope="colgroup" id="Pullup Jump Shot">Pullup Jump Shot</th>
     </tr>
@@ -1176,8 +1174,8 @@ wnba_pbp %>%
     <tr class="gt_group_heading_row">
       <th colspan="2" class="gt_group_heading" scope="colgroup" id="Driving Floating Jump Shot">Driving Floating Jump Shot</th>
     </tr>
-    <tr class="gt_row_group_first"><td headers="Driving Floating Jump Shot  makes_and_attempts" class="gt_row gt_left gt_striped">0 for 1</td>
-<td headers="Driving Floating Jump Shot  success_rate" class="gt_row gt_right gt_striped">0.0000000</td></tr>
+    <tr class="gt_row_group_first"><td headers="Driving Floating Jump Shot  makes_and_attempts" class="gt_row gt_left">0 for 1</td>
+<td headers="Driving Floating Jump Shot  success_rate" class="gt_row gt_right">0.0000000</td></tr>
     <tr class="gt_group_heading_row">
       <th colspan="2" class="gt_group_heading" scope="colgroup" id="Running Jump Shot">Running Jump Shot</th>
     </tr>
@@ -1211,28 +1209,27 @@ wnba_pbp %>%
   rename(jumpshot_type = type_text) %>%
   select(jumpshot_type, makes_and_attempts, success_rate) %>%
   gt() %>% 
-  gt_theme_guardian() %>% 
+  #gt_theme_guardian() %>% 
   tab_header(title = "Napheesa Collier shows a similar inclination towards more complex jump shots. But hers are pivot-y!")
 ```
 
     ## `summarise()` has grouped output by 'type_text'. You can override using the
     ## `.groups` argument.
 
-<div id="ezpvozvmsw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#ezpvozvmsw table {
-  font-family: 'Noto Sans', system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+<div id="vuhepfdpij" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vuhepfdpij table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-&#10;#ezpvozvmsw thead, #ezpvozvmsw tbody, #ezpvozvmsw tfoot, #ezpvozvmsw tr, #ezpvozvmsw td, #ezpvozvmsw th {
+&#10;#vuhepfdpij thead, #vuhepfdpij tbody, #vuhepfdpij tfoot, #vuhepfdpij tr, #vuhepfdpij td, #vuhepfdpij th {
   border-style: none;
 }
-&#10;#ezpvozvmsw p {
+&#10;#vuhepfdpij p {
   margin: 0;
   padding: 0;
 }
-&#10;#ezpvozvmsw .gt_table {
+&#10;#vuhepfdpij .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1242,26 +1239,26 @@ wnba_pbp %>%
   font-size: 16px;
   font-weight: normal;
   font-style: normal;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   width: auto;
   border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #40C5FF;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
   border-right-style: none;
   border-right-width: 2px;
   border-right-color: #D3D3D3;
   border-bottom-style: solid;
-  border-bottom-width: 3px;
-  border-bottom-color: #FFFFFF;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
   border-left-style: none;
   border-left-width: 2px;
   border-left-color: #D3D3D3;
 }
-&#10;#ezpvozvmsw .gt_caption {
+&#10;#vuhepfdpij .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
-&#10;#ezpvozvmsw .gt_title {
+&#10;#vuhepfdpij .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1269,10 +1266,10 @@ wnba_pbp %>%
   padding-bottom: 4px;
   padding-left: 5px;
   padding-right: 5px;
-  border-bottom-color: #F6F6F6;
+  border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
-&#10;#ezpvozvmsw .gt_subtitle {
+&#10;#vuhepfdpij .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1280,13 +1277,13 @@ wnba_pbp %>%
   padding-bottom: 5px;
   padding-left: 5px;
   padding-right: 5px;
-  border-top-color: #F6F6F6;
+  border-top-color: #FFFFFF;
   border-top-width: 0;
 }
-&#10;#ezpvozvmsw .gt_heading {
-  background-color: #F6F6F6;
-  text-align: left;
-  border-bottom-color: #F6F6F6;
+&#10;#vuhepfdpij .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
   border-left-style: none;
   border-left-width: 1px;
   border-left-color: #D3D3D3;
@@ -1294,18 +1291,18 @@ wnba_pbp %>%
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#ezpvozvmsw .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 0px;
-  border-bottom-color: #D3D3D3;
-}
-&#10;#ezpvozvmsw .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #40C5FF;
+&#10;#vuhepfdpij .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
-  border-bottom-color: #ECECEC;
+  border-bottom-color: #D3D3D3;
+}
+&#10;#vuhepfdpij .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
   border-left-style: none;
   border-left-width: 1px;
   border-left-color: #D3D3D3;
@@ -1313,11 +1310,11 @@ wnba_pbp %>%
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#ezpvozvmsw .gt_col_heading {
+&#10;#vuhepfdpij .gt_col_heading {
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   font-size: 100%;
-  font-weight: bold;
+  font-weight: normal;
   text-transform: inherit;
   border-left-style: none;
   border-left-width: 1px;
@@ -1332,27 +1329,27 @@ wnba_pbp %>%
   padding-right: 5px;
   overflow-x: hidden;
 }
-&#10;#ezpvozvmsw .gt_column_spanner_outer {
+&#10;#vuhepfdpij .gt_column_spanner_outer {
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   font-size: 100%;
-  font-weight: bold;
+  font-weight: normal;
   text-transform: inherit;
   padding-top: 0;
   padding-bottom: 0;
   padding-left: 4px;
   padding-right: 4px;
 }
-&#10;#ezpvozvmsw .gt_column_spanner_outer:first-child {
+&#10;#vuhepfdpij .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
-&#10;#ezpvozvmsw .gt_column_spanner_outer:last-child {
+&#10;#vuhepfdpij .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
-&#10;#ezpvozvmsw .gt_column_spanner {
+&#10;#vuhepfdpij .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
-  border-bottom-color: #ECECEC;
+  border-bottom-color: #D3D3D3;
   vertical-align: bottom;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -1360,25 +1357,25 @@ wnba_pbp %>%
   display: inline-block;
   width: 100%;
 }
-&#10;#ezpvozvmsw .gt_spanner_row {
+&#10;#vuhepfdpij .gt_spanner_row {
   border-bottom-style: hidden;
 }
-&#10;#ezpvozvmsw .gt_group_heading {
+&#10;#vuhepfdpij .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
   padding-right: 5px;
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   font-size: 100%;
-  font-weight: bold;
+  font-weight: initial;
   text-transform: inherit;
   border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #BEBEBE;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
   border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: #BEBEBE;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
   border-left-style: none;
   border-left-width: 1px;
   border-left-color: #D3D3D3;
@@ -1388,35 +1385,35 @@ wnba_pbp %>%
   vertical-align: middle;
   text-align: left;
 }
-&#10;#ezpvozvmsw .gt_empty_group_heading {
+&#10;#vuhepfdpij .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   font-size: 100%;
-  font-weight: bold;
+  font-weight: initial;
   border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #BEBEBE;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
   border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: #BEBEBE;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
   vertical-align: middle;
 }
-&#10;#ezpvozvmsw .gt_from_md > :first-child {
+&#10;#vuhepfdpij .gt_from_md > :first-child {
   margin-top: 0;
 }
-&#10;#ezpvozvmsw .gt_from_md > :last-child {
+&#10;#vuhepfdpij .gt_from_md > :last-child {
   margin-bottom: 0;
 }
-&#10;#ezpvozvmsw .gt_row {
-  padding-top: 4px;
-  padding-bottom: 4px;
+&#10;#vuhepfdpij .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
   padding-left: 5px;
   padding-right: 5px;
   margin: 10px;
   border-top-style: solid;
-  border-top-width: white;
-  border-top-color: #FFFFFF;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
   border-left-style: none;
   border-left-width: 1px;
   border-left-color: #D3D3D3;
@@ -1426,9 +1423,9 @@ wnba_pbp %>%
   vertical-align: middle;
   overflow-x: hidden;
 }
-&#10;#ezpvozvmsw .gt_stub {
+&#10;#vuhepfdpij .gt_stub {
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   font-size: 100%;
   font-weight: initial;
   text-transform: inherit;
@@ -1438,9 +1435,9 @@ wnba_pbp %>%
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#ezpvozvmsw .gt_stub_row_group {
+&#10;#vuhepfdpij .gt_stub_row_group {
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   font-size: 100%;
   font-weight: initial;
   text-transform: inherit;
@@ -1451,29 +1448,29 @@ wnba_pbp %>%
   padding-right: 5px;
   vertical-align: top;
 }
-&#10;#ezpvozvmsw .gt_row_group_first td {
-  border-top-width: 1px;
+&#10;#vuhepfdpij .gt_row_group_first td {
+  border-top-width: 2px;
 }
-&#10;#ezpvozvmsw .gt_row_group_first th {
-  border-top-width: 1px;
+&#10;#vuhepfdpij .gt_row_group_first th {
+  border-top-width: 2px;
 }
-&#10;#ezpvozvmsw .gt_summary_row {
+&#10;#vuhepfdpij .gt_summary_row {
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   text-transform: inherit;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#ezpvozvmsw .gt_first_summary_row {
+&#10;#vuhepfdpij .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
-&#10;#ezpvozvmsw .gt_first_summary_row.thick {
+&#10;#vuhepfdpij .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
-&#10;#ezpvozvmsw .gt_last_summary_row {
+&#10;#vuhepfdpij .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1482,16 +1479,16 @@ wnba_pbp %>%
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#ezpvozvmsw .gt_grand_summary_row {
+&#10;#vuhepfdpij .gt_grand_summary_row {
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   text-transform: inherit;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#ezpvozvmsw .gt_first_grand_summary_row {
+&#10;#vuhepfdpij .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1500,7 +1497,7 @@ wnba_pbp %>%
   border-top-width: 6px;
   border-top-color: #D3D3D3;
 }
-&#10;#ezpvozvmsw .gt_last_grand_summary_row_top {
+&#10;#vuhepfdpij .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1509,22 +1506,22 @@ wnba_pbp %>%
   border-bottom-width: 6px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#ezpvozvmsw .gt_striped {
-  background-color: #ECECEC;
+&#10;#vuhepfdpij .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
 }
-&#10;#ezpvozvmsw .gt_table_body {
+&#10;#vuhepfdpij .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
   border-bottom-style: solid;
-  border-bottom-width: 3px;
-  border-bottom-color: #FFFFFF;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
 }
-&#10;#ezpvozvmsw .gt_footnotes {
+&#10;#vuhepfdpij .gt_footnotes {
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   border-bottom-style: none;
-  border-bottom-width: 0px;
+  border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
   border-left-style: none;
   border-left-width: 2px;
@@ -1533,7 +1530,7 @@ wnba_pbp %>%
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#ezpvozvmsw .gt_footnote {
+&#10;#vuhepfdpij .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1541,11 +1538,11 @@ wnba_pbp %>%
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#ezpvozvmsw .gt_sourcenotes {
+&#10;#vuhepfdpij .gt_sourcenotes {
   color: #333333;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   border-bottom-style: none;
-  border-bottom-width: 0px;
+  border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
   border-left-style: none;
   border-left-width: 2px;
@@ -1554,71 +1551,71 @@ wnba_pbp %>%
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#ezpvozvmsw .gt_sourcenote {
-  font-size: 12px;
+&#10;#vuhepfdpij .gt_sourcenote {
+  font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#ezpvozvmsw .gt_left {
+&#10;#vuhepfdpij .gt_left {
   text-align: left;
 }
-&#10;#ezpvozvmsw .gt_center {
+&#10;#vuhepfdpij .gt_center {
   text-align: center;
 }
-&#10;#ezpvozvmsw .gt_right {
+&#10;#vuhepfdpij .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
-&#10;#ezpvozvmsw .gt_font_normal {
+&#10;#vuhepfdpij .gt_font_normal {
   font-weight: normal;
 }
-&#10;#ezpvozvmsw .gt_font_bold {
+&#10;#vuhepfdpij .gt_font_bold {
   font-weight: bold;
 }
-&#10;#ezpvozvmsw .gt_font_italic {
+&#10;#vuhepfdpij .gt_font_italic {
   font-style: italic;
 }
-&#10;#ezpvozvmsw .gt_super {
+&#10;#vuhepfdpij .gt_super {
   font-size: 65%;
 }
-&#10;#ezpvozvmsw .gt_footnote_marks {
+&#10;#vuhepfdpij .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
-&#10;#ezpvozvmsw .gt_asterisk {
+&#10;#vuhepfdpij .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
-&#10;#ezpvozvmsw .gt_indent_1 {
+&#10;#vuhepfdpij .gt_indent_1 {
   text-indent: 5px;
 }
-&#10;#ezpvozvmsw .gt_indent_2 {
+&#10;#vuhepfdpij .gt_indent_2 {
   text-indent: 10px;
 }
-&#10;#ezpvozvmsw .gt_indent_3 {
+&#10;#vuhepfdpij .gt_indent_3 {
   text-indent: 15px;
 }
-&#10;#ezpvozvmsw .gt_indent_4 {
+&#10;#vuhepfdpij .gt_indent_4 {
   text-indent: 20px;
 }
-&#10;#ezpvozvmsw .gt_indent_5 {
+&#10;#vuhepfdpij .gt_indent_5 {
   text-indent: 25px;
 }
-&#10;#ezpvozvmsw .katex-display {
+&#10;#vuhepfdpij .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
-&#10;#ezpvozvmsw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+&#10;#vuhepfdpij div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
 <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
   <thead>
     <tr class="gt_heading">
-      <td colspan="2" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="color: #005689; font-size: 22px; font-weight: 700;">Napheesa Collier shows a similar inclination towards more complex jump shots. But hers are pivot-y!</td>
+      <td colspan="2" class="gt_heading gt_title gt_font_normal gt_bottom_border" style>Napheesa Collier shows a similar inclination towards more complex jump shots. But hers are pivot-y!</td>
     </tr>
     &#10;    <tr class="gt_col_headings">
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="makes_and_attempts">makes_and_attempts</th>
@@ -1629,13 +1626,13 @@ wnba_pbp %>%
     <tr class="gt_group_heading_row">
       <th colspan="2" class="gt_group_heading" scope="colgroup" id="Jump Shot">Jump Shot</th>
     </tr>
-    <tr class="gt_row_group_first"><td headers="Jump Shot  makes_and_attempts" class="gt_row gt_left" style="border-top-width: 0px; border-top-style: solid; border-top-color: white;">10 for 32</td>
-<td headers="Jump Shot  success_rate" class="gt_row gt_right" style="border-top-width: 0px; border-top-style: solid; border-top-color: white;">0.3125000</td></tr>
+    <tr class="gt_row_group_first"><td headers="Jump Shot  makes_and_attempts" class="gt_row gt_left">10 for 32</td>
+<td headers="Jump Shot  success_rate" class="gt_row gt_right">0.3125000</td></tr>
     <tr class="gt_group_heading_row">
       <th colspan="2" class="gt_group_heading" scope="colgroup" id="Turnaround Jump Shot">Turnaround Jump Shot</th>
     </tr>
-    <tr class="gt_row_group_first"><td headers="Turnaround Jump Shot  makes_and_attempts" class="gt_row gt_left gt_striped">10 for 16</td>
-<td headers="Turnaround Jump Shot  success_rate" class="gt_row gt_right gt_striped">0.6250000</td></tr>
+    <tr class="gt_row_group_first"><td headers="Turnaround Jump Shot  makes_and_attempts" class="gt_row gt_left">10 for 16</td>
+<td headers="Turnaround Jump Shot  success_rate" class="gt_row gt_right">0.6250000</td></tr>
     <tr class="gt_group_heading_row">
       <th colspan="2" class="gt_group_heading" scope="colgroup" id="Turnaround Fade Away Jump Shot">Turnaround Fade Away Jump Shot</th>
     </tr>
@@ -1644,8 +1641,8 @@ wnba_pbp %>%
     <tr class="gt_group_heading_row">
       <th colspan="2" class="gt_group_heading" scope="colgroup" id="Fade Away Jump Shot">Fade Away Jump Shot</th>
     </tr>
-    <tr class="gt_row_group_first"><td headers="Fade Away Jump Shot  makes_and_attempts" class="gt_row gt_left gt_striped">4 for 7</td>
-<td headers="Fade Away Jump Shot  success_rate" class="gt_row gt_right gt_striped">0.5714286</td></tr>
+    <tr class="gt_row_group_first"><td headers="Fade Away Jump Shot  makes_and_attempts" class="gt_row gt_left">4 for 7</td>
+<td headers="Fade Away Jump Shot  success_rate" class="gt_row gt_right">0.5714286</td></tr>
     <tr class="gt_group_heading_row">
       <th colspan="2" class="gt_group_heading" scope="colgroup" id="Pullup Jump Shot">Pullup Jump Shot</th>
     </tr>
@@ -1654,8 +1651,8 @@ wnba_pbp %>%
     <tr class="gt_group_heading_row">
       <th colspan="2" class="gt_group_heading" scope="colgroup" id="Turnaround Bank Jump Shot">Turnaround Bank Jump Shot</th>
     </tr>
-    <tr class="gt_row_group_first"><td headers="Turnaround Bank Jump Shot  makes_and_attempts" class="gt_row gt_left gt_striped">2 for 2</td>
-<td headers="Turnaround Bank Jump Shot  success_rate" class="gt_row gt_right gt_striped">1.0000000</td></tr>
+    <tr class="gt_row_group_first"><td headers="Turnaround Bank Jump Shot  makes_and_attempts" class="gt_row gt_left">2 for 2</td>
+<td headers="Turnaround Bank Jump Shot  success_rate" class="gt_row gt_right">1.0000000</td></tr>
     <tr class="gt_group_heading_row">
       <th colspan="2" class="gt_group_heading" scope="colgroup" id="Driving Floating Bank Jump Shot">Driving Floating Bank Jump Shot</th>
     </tr>
@@ -1664,8 +1661,8 @@ wnba_pbp %>%
     <tr class="gt_group_heading_row">
       <th colspan="2" class="gt_group_heading" scope="colgroup" id="Driving Floating Jump Shot">Driving Floating Jump Shot</th>
     </tr>
-    <tr class="gt_row_group_first"><td headers="Driving Floating Jump Shot  makes_and_attempts" class="gt_row gt_left gt_striped">0 for 1</td>
-<td headers="Driving Floating Jump Shot  success_rate" class="gt_row gt_right gt_striped">0.0000000</td></tr>
+    <tr class="gt_row_group_first"><td headers="Driving Floating Jump Shot  makes_and_attempts" class="gt_row gt_left">0 for 1</td>
+<td headers="Driving Floating Jump Shot  success_rate" class="gt_row gt_right">0.0000000</td></tr>
     <tr class="gt_group_heading_row">
       <th colspan="2" class="gt_group_heading" scope="colgroup" id="Floating Jump Shot">Floating Jump Shot</th>
     </tr>
@@ -1674,8 +1671,8 @@ wnba_pbp %>%
     <tr class="gt_group_heading_row">
       <th colspan="2" class="gt_group_heading" scope="colgroup" id="Jump Shot Bank">Jump Shot Bank</th>
     </tr>
-    <tr class="gt_row_group_first"><td headers="Jump Shot Bank  makes_and_attempts" class="gt_row gt_left gt_striped">0 for 1</td>
-<td headers="Jump Shot Bank  success_rate" class="gt_row gt_right gt_striped">0.0000000</td></tr>
+    <tr class="gt_row_group_first"><td headers="Jump Shot Bank  makes_and_attempts" class="gt_row gt_left">0 for 1</td>
+<td headers="Jump Shot Bank  success_rate" class="gt_row gt_right">0.0000000</td></tr>
     <tr class="gt_group_heading_row">
       <th colspan="2" class="gt_group_heading" scope="colgroup" id="Running Jump Shot">Running Jump Shot</th>
     </tr>
@@ -1684,8 +1681,8 @@ wnba_pbp %>%
     <tr class="gt_group_heading_row">
       <th colspan="2" class="gt_group_heading" scope="colgroup" id="Step Back Jump Shot">Step Back Jump Shot</th>
     </tr>
-    <tr class="gt_row_group_first"><td headers="Step Back Jump Shot  makes_and_attempts" class="gt_row gt_left gt_striped">1 for 1</td>
-<td headers="Step Back Jump Shot  success_rate" class="gt_row gt_right gt_striped">1.0000000</td></tr>
+    <tr class="gt_row_group_first"><td headers="Step Back Jump Shot  makes_and_attempts" class="gt_row gt_left">1 for 1</td>
+<td headers="Step Back Jump Shot  success_rate" class="gt_row gt_right">1.0000000</td></tr>
   </tbody>
   &#10;  
 </table>
