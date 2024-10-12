@@ -13,29 +13,10 @@ Let’s get started with some WNBA R packages.
 ``` r
 library(wehoop)
 library(dplyr)
-```
-
-    ## 
-    ## Attaching package: 'dplyr'
-
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     filter, lag
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     intersect, setdiff, setequal, union
-
-``` r
 library(tidyr)
 library(ggplot2)
 library(ggforce)
 library(gtExtras)
-```
-
-    ## Loading required package: gt
-
-``` r
 wnba_pbp <- wehoop::load_wnba_pbp()
 ```
 
@@ -134,10 +115,6 @@ wnba_pbp %>%
   arrange(desc(total_points))
 ```
 
-    ## `summarise()` has grouped output by 'home_team_mascot', 'away_team_mascot',
-    ## 'season', 'game_id', 'day', 'athlete_id_1', 'period_display_value'. You can
-    ## override using the `.groups` argument.
-
     ## # A tibble: 20 × 9
     ## # Groups:   home_team_mascot, away_team_mascot, season, game_id, day,
     ## #   athlete_id_1, period_display_value [20]
@@ -186,12 +163,6 @@ wnba_pbp %>%
   select(plays_in_2024, total_points_on_play) %>%
   knitr::kable()
 ```
-
-    ## `summarise()` has grouped output by 'home_team_mascot', 'away_team_mascot',
-    ## 'season', 'game_id', 'day', 'athlete_id_1', 'period_display_value'. You can
-    ## override using the `.groups` argument.
-    ## Adding missing grouping variables: `home_team_mascot`, `away_team_mascot`,
-    ## `season`, `game_id`, `day`, `athlete_id_1`, `period_display_value`
 
 | plays_in_2024 | total_points_on_play |
 |--------------:|---------------------:|
@@ -332,9 +303,6 @@ wnba_pbp %>%
   knitr::kable()
 ```
 
-    ## `summarise()` has grouped output by 'type_text'. You can override using the
-    ## `.groups` argument.
-
 | jumpshot_type                   | makes_and_attempts | success_rate |
 |:--------------------------------|:-------------------|-------------:|
 | Driving Floating Bank Jump Shot | 1 for 1            |    1.0000000 |
@@ -378,9 +346,6 @@ wnba_pbp %>%
   select(jumpshot_type, makes_and_attempts, success_rate) %>%
   knitr::kable()
 ```
-
-    ## `summarise()` has grouped output by 'type_text'. You can override using the
-    ## `.groups` argument.
 
 | jumpshot_type                   | makes_and_attempts | success_rate |
 |:--------------------------------|:-------------------|-------------:|
